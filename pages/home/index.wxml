@@ -1,0 +1,39 @@
+<!--index.wxml-->
+<view class="wrap">
+  <swiper indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" mode="scaleToFill"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="process">
+    <view class="process-title">
+      <view class="process-title-dot"></view>
+      垃圾代扔流程
+    </view>
+    <view class="process-detail">
+      <view class="process-item">
+        <image src="http://www.zilii.top/assets/blogImg/shouquan.png" class="process-item-img"/>
+        <text>授权登录</text>
+      </view>
+      <view class="process-line"></view>
+      <view class="process-item">
+        <image src="http://www.zilii.top/assets/blogImg/yuyue.png" class="process-item-img"/>
+        <text>派单预约</text>
+      </view>
+      <view class="process-line"></view>
+      <view class="process-item">
+        <image src="http://www.zilii.top/assets/blogImg/shangmen.png" class="process-item-img"/>
+        <text>等待上门</text>
+      </view>
+      <view class="process-line"></view>
+      <view class="process-item">
+        <image src="http://www.zilii.top/assets/blogImg/wancheng.png" class="process-item-img"/>
+        <text>完成订单</text>
+      </view>      
+    </view>
+    <view class="process-paidan">一键派单</view>
+  </view>
+</view>

@@ -1,0 +1,3 @@
+<view class="wrap">
+  <navigator url="/pages/address/index">地址管理</navigator>
+</view>
