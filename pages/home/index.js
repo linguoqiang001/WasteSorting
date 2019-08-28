@@ -42,6 +42,7 @@ Page({
     wx.navigateTo({
       url: '/pages/package/index'
     })
+  },
   onGotUserInfo (e) {
     console.log(e)
   }
