@@ -23,7 +23,7 @@
   margin-left: 10rpx;
 }
 .item {
-  border: 2rpx solid #24C5F9;
+  border: 2rpx solid #32CD32;
   border-radius: 20rpx;
   width: 45%;
   padding: 20rpx 20rpx;
@@ -58,12 +58,12 @@
 .purchase-btn {
   width: 300rpx;
   height: 80rpx;
-  background: #24C5F9;
+  background: #32CD32;
   text-align: center;
   border-radius: 40rpx;
   line-height: 80rpx;
   color: #ffffff;
 }
 .selected {
-  background: #24C5F9;
+  background: #32CD32;
 }

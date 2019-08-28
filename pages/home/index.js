@@ -6,9 +6,9 @@ Page({
   data: {
     motto: 'Hello World',
     userInfo: {},
-    imgUrls: ['https://pic6.ajkimg.com/news/794284a28ebe0214af7c8066d489fecd?imageMogr2/format/jpg/thumbnail/492x210',
-    'https://pic6.ajkimg.com/news/3619fdbc264e63799fb4d0aa12c23858?imageMogr2/format/jpg/thumbnail/492x210',
-    'https://pic6.ajkimg.com/news/794284a28ebe0214af7c8066d489fecd?imageMogr2/format/jpg/thumbnail/492x210'
+    imgUrls: ['http://www.zilii.top/assets/blogImg/1.png',
+    'http://www.zilii.top/assets/blogImg/2.png',
+    'http://www.zilii.top/assets/blogImg/4.png',
   ]
   },
   //事件处理函数
