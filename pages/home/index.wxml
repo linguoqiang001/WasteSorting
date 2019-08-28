@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="wrap">
-  <swiper indicator-dots="{{indicatorDots}}"
+  <swiper class="ac-img" indicator-dots="{{indicatorDots}}"
     autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
     <block wx:for="{{imgUrls}}">
       <swiper-item>
@@ -35,5 +35,9 @@
       </view>      
     </view>
     <view class="process-paidan" bindtap="sendOrder">一键派单</view>
+  </view>
+  <view class="combo">
+    <view class="title">套餐购买</view>
+    <view class="month"></view>
   </view>
 </view>

@@ -10,8 +10,8 @@
   ],
   "window": {
     "navigationBarTitleText": "垃圾分类",
-    "navigationBarBackgroundColor": "#24C5F9",
-    "backgroundColor": "#24C5F9"
+    "navigationBarBackgroundColor": "#32CD32",
+    "backgroundColor": "#32CD32"
   },
   "tabBar": {
     "list": [

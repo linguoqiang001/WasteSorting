@@ -5,10 +5,11 @@ input{
 .detail{
   height: 100rpx;
   line-height: 100rpx;
-  margin-left: 40rpx;
+  padding-left: 40rpx;
   width: 100%;
   display: flex;
   align-items: center;
+  border-bottom: 1rpx solid #dcdcdc;
 }
 .detail .title{
   width: 160rpx;
@@ -16,7 +17,7 @@ input{
 }
 .btn{
   margin-top: 40rpx;
-  background-color: #1E90FF;
+  background-color: #32CD32;
   color: #fff;
   margin: 0 60rpx;
   margin-top: 60rpx;

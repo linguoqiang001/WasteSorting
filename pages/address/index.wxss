@@ -1,6 +1,6 @@
 .add-btn{
   color:#fff;
-  background-color: #1E90FF;
+  background-color: #32CD32;
   margin: 0 40rpx;
   position: fixed;
   bottom: 0;

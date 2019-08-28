@@ -9,7 +9,7 @@
 .avatar {
   display: flex;
   align-items: center;
-  background: #24C5F9;
+  background: #32CD32;
   padding: 30rpx 30px;
 }
 .avatar-wrap {

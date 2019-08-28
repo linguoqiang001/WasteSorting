@@ -51,9 +51,12 @@
   margin: 40rpx auto;
   width: 220rpx;
   height: 60rpx;
-  background: #24C5F9;
+  background: #32CD32;
   border-radius: 30rpx;
   color: #ffffff;
   text-align: center;
   line-height: 60rpx;
+}
+.ac-img{
+  height:370rpx;
 }
