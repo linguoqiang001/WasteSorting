@@ -1,1 +1,8 @@
-<view>我的地址</view>
+<view>
+  <view  class="address" wx:for="{{objectArray}}" wx:key="id" style="display: block;" >
+      <view> 姓名：{{item.name}}         电话：{{item.phone}}</view>
+      <view>地址：{{item.address+item.floor}}</view> 
+      <view class="edit" data-name='{{item.name}}' data-phone="{{item.phone}}" data-address="{{item.address}}" data-floor="{{item.floor}}"bindtap="editAddress">编辑</view>
+  </view>
+  <button class="add-btn" bindtap="addAddress"> 新增地址</button>
+</view>

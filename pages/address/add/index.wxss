@@ -1,0 +1,23 @@
+input{
+  display: inline-block;
+  width: 466rpx;
+}
+.detail{
+  height: 100rpx;
+  line-height: 100rpx;
+  margin-left: 40rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.detail .title{
+  width: 160rpx;
+  display: inline-block;
+}
+.btn{
+  margin-top: 40rpx;
+  background-color: #1E90FF;
+  color: #fff;
+  margin: 0 60rpx;
+  margin-top: 60rpx;
+}
