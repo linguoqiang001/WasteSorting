@@ -1,3 +1,11 @@
+.wrap {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #F1F1F1;
+} 
 .slide-image {
   width: 100%;
   height: 100%;
@@ -18,7 +26,7 @@
   background: #000;
 }
 .process-detail {
-  margin-top: 10px;
+  margin-top: 20px;
   align-items: center;
   display: flex;
   justify-content: center;
@@ -28,6 +36,7 @@
   align-items: center;
   flex-direction: column;
   font-size: 24rpx;
+  margin-top: 10rpx;
 }
 .process-item-img {
   width: 25px;
@@ -39,7 +48,7 @@
   background: #000000;
 }
 .process-paidan {
-  margin: 20rpx auto;
+  margin: 40rpx auto;
   width: 220rpx;
   height: 60rpx;
   background: #24C5F9;

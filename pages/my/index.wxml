@@ -1,3 +1,12 @@
+<!--index.wxml-->
 <view class="wrap">
-  <navigator url="/pages/address/index">地址管理</navigator>
+  <view class="avatar">
+    <view class="avatar-wrap">
+      <image class="avatar-img" src="http://www.zilii.top/assets/blogImg/avatar7.png" />
+    </view>
+    <text class="nickname">阿斯蒂</text>
+  </view>
+  <view class="items">
+    <navigator class="item" url="/pages/address/index">地址管理</navigator>
+  </view>
 </view>

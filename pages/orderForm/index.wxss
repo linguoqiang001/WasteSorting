@@ -1,0 +1,31 @@
+.items {
+  background: #ffffff;
+  padding: 0 20px;
+}
+.item {
+  display: flex;
+  padding: 16rpx 0;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #E6E6E4;
+}
+.item-img {
+  margin-left: 10rpx;
+  width: 20rpx;
+  height: 20rpx;
+}
+.item-result {
+  text-align: right;
+  display: inline-block;
+  min-width: 200rpx;
+}
+.item-switch {
+  height: 40rpx;
+}
+.item:last-child	 {
+  border-bottom: none;
+}
+.btn {
+  margin-top: 30rpx;
+  width: 80%;
+}

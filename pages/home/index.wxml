@@ -34,6 +34,6 @@
         <text>完成订单</text>
       </view>      
     </view>
-    <view class="process-paidan">一键派单</view>
+    <view class="process-paidan" bindtap="sendOrder">一键派单</view>
   </view>
 </view>

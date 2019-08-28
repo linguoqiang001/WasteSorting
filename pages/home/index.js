@@ -19,5 +19,10 @@ Page({
   },
   onLoad: function () {
 
+  },
+  sendOrder () {
+    wx.navigateTo({
+      url: '/pages/orderForm/index'
+    })
   }
 })

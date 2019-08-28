@@ -32,4 +32,5 @@ Page({
       url:'./add/index'
     })
   }
+
 })

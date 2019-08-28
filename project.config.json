@@ -28,13 +28,42 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
-			"list": []
+			"current": 3,
+			"list": [
+				{
+					"id": -1,
+					"name": "address",
+					"pathName": "pages/address/index",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "orderForm",
+					"pathName": "pages/orderForm/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "package",
+					"pathName": "pages/package/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "package",
+					"pathName": "pages/my/index",
+					"query": ""
+				}
+			]
 		}
 	}
 }

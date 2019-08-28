@@ -4,10 +4,14 @@
     "pages/order/index",
     "pages/my/index",
     "pages/address/index",
-    "pages/address/add/index"
+    "pages/address/add/index",
+    "pages/orderForm/index",
+    "pages/package/index"
   ],
   "window": {
-    "navigationBarTitleText": "垃圾分类"
+    "navigationBarTitleText": "垃圾分类",
+    "navigationBarBackgroundColor": "#24C5F9",
+    "backgroundColor": "#24C5F9"
   },
   "tabBar": {
     "list": [
