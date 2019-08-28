@@ -8,6 +8,9 @@
       </swiper-item>
     </block>
   </swiper>
+  <view class="combo">
+    <view class="buy" bindtap="buyCombo">购买套餐更优惠，点击去购买</view>
+  </view>
   <view class="process">
     <view class="process-title">
       <view class="process-title-dot"></view>
@@ -15,29 +18,25 @@
     </view>
     <view class="process-detail">
       <view class="process-item">
-        <image src="http://www.zilii.top/assets/blogImg/shouquan.png" class="process-item-img"/>
+        <image src="http://www.zilii.top/assets/blogImg/9d05711c30468889dd9f8fc52e5cb2a.png" class="process-item-img"/>
         <text>授权登录</text>
       </view>
       <view class="process-line"></view>
       <view class="process-item">
-        <image src="http://www.zilii.top/assets/blogImg/yuyue.png" class="process-item-img"/>
+        <image src="http://www.zilii.top/assets/blogImg/7a13bbd5a2ba50172caa9102f5ab4a5.png" class="process-item-img"/>
         <text>派单预约</text>
       </view>
       <view class="process-line"></view>
       <view class="process-item">
-        <image src="http://www.zilii.top/assets/blogImg/shangmen.png" class="process-item-img"/>
+        <image src="http://www.zilii.top/assets/blogImg/bfa69ac9a452e555df10a98e8c9ffeb.png" class="process-item-img"/>
         <text>等待上门</text>
       </view>
       <view class="process-line"></view>
       <view class="process-item">
-        <image src="http://www.zilii.top/assets/blogImg/wancheng.png" class="process-item-img"/>
+        <image src="http://www.zilii.top/assets/blogImg/52efd325eb9f3ac885e3644932f75f4.png" class="process-item-img"/>
         <text>完成订单</text>
       </view>      
     </view>
     <view class="process-paidan" bindtap="sendOrder">一键派单</view>
-  </view>
-  <view class="combo">
-    <view class="title">套餐购买</view>
-    <view class="month"></view>
   </view>
 </view>

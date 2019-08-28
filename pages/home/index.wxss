@@ -5,6 +5,7 @@
   left: 0;
   right: 0;
   background: #F1F1F1;
+  height: 100%;
 } 
 .slide-image {
   width: 100%;
@@ -59,4 +60,39 @@
 }
 .ac-img{
   height:370rpx;
+}
+.combo{
+  padding: 0 40rpx;
+  background: #ffffff;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.title{
+  color: #32CD32;
+}
+.combo{
+  height: 60rpx;
+  width: 100%;
+  line-height: 60rpx;
+  display: inline-block;
+  background-color: #f5f5f5;
+}
+.buy {
+  padding-left: 20px;
+  font-size: 12px;
+  color: red;
+  display: inline-block;
+  white-space: nowrap;
+  animation: 10s wordsLoop linear infinite normal;
+}
+
+@keyframes wordsLoop {
+  0% {
+      transform: translateX(200px);
+      -webkit-transform: translateX(200px);
+  }
+  100% {
+      transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+  }
 }
