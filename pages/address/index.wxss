@@ -1,0 +1,25 @@
+.add-btn{
+  color:#fff;
+  background-color: #1E90FF;
+  margin: 0 40rpx;
+  position: fixed;
+  bottom: 0;
+  width: 670rpx;
+}
+.address{
+  font-size: 30rpx;
+  border-bottom: 1px solid #cccccc;
+  padding-left: 50rpx;
+  position: relative;
+}
+.address view{
+    height: 62rpx;
+    line-height: 62rpx;
+}
+.edit{
+    position: absolute;
+    top: 0;
+    right: 30rpx;
+    transform: translateY(50%);
+    color: red;
+}

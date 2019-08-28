@@ -1,0 +1,15 @@
+<view>
+  <view class="detail">
+  <text class="title">联系人</text><input type="text" placeholder="请输入联系人名字" value="{{name}}"/>
+  </view>
+  <view class="detail">
+  <text class="title">手机号</text><input type="number" placeholder="请填写联系人手机号" value="{{phone}}"/>
+  </view>
+  <view class="detail">
+  <text class="title">详细地址</text><input type="text" placeholder="点击选择上门地址" value="{{address}}"/>
+  </view>
+  <view class="detail">
+  <text class="title">门牌号</text><input type="text" placeholder="例如:1217号15楼" value="{{floor}}"/>
+  </view>
+  <button class="btn" bindtap="save">保存并使用</button>
+</view>
