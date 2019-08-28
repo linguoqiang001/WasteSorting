@@ -9,15 +9,6 @@ Page({
       { id: 0, name: 'aaa', phone: '12345678901',address: '不知道在哪里呀呀呀呀呀呀呀呀呀呀', floor: '15F' },
     ],
   },
-  addAddress: function(e) {
-    var name = e.currentTarget.dataset.name;
-    var phone = e.currentTarget.dataset.phone;
-    var address = e.currentTarget.dataset.address;
-    var floor = e.currentTarget.dataset.floor;
-    wx.navigateTo({
-      url:'./add/index?name=' + name + '&phone=' + phone + '&ad=' + address + '&fl=' + floor
-    })
-  },
   editAddress: function(e) {
     var name = e.currentTarget.dataset.name;
     var phone = e.currentTarget.dataset.phone;

@@ -1,11 +1,15 @@
 <!--index.wxml-->
 <view class="wrap">
-  <view class="avatar">
+  <button class="avatar" hover-class="none" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
     <view class="avatar-wrap">
-      <image class="avatar-img" src="http://www.zilii.top/assets/blogImg/avatar7.png" />
+      <image class="avatar-img" src="{{userInfo.avatarUrl}}" />
     </view>
-    <text class="nickname">阿斯蒂</text>
-  </view>
+    <view class="avatar-info" wx:if="{{!userInfo.nickName}}">
+      <text class="info-click">点击授权</text>
+      <text class="info-tip">授权后体验更佳</text>
+    </view>
+    <text wx:else class="nickname">{{userInfo.nickName}}</text>
+  </button>
   <view class="items">
     <navigator class="item" url="/pages/address/index">地址管理</navigator>
   </view>
