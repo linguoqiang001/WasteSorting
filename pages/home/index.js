@@ -1,6 +1,7 @@
 //index.js
 //获取应用实例
 const app = getApp()
+let http = require('../../utils/network.js')
 
 Page({
   data: {
@@ -18,20 +19,18 @@ Page({
     })
   },
   onLoad: function () {
-      wx.login({
-        success: res => {
-          //发送 res.code 到后台换取 openId, sessionKey, unionId
-          console.log(res)
-          
-          wx.request({
-            url:`https://api.weixin.qq.com/sns/jscode2session?appid=wxd29b1aef999221b0&secret=922f71769e48bb9bc134761374cf0b29&js_code=${res.code}&grant_type=authorization_code`, 
-            method:'get',
-            success:function(res1){
-              console.log(res1)
-            }
-         })
-        }
-      })
+    wx.login({
+      success: res => {
+        //发送 res.code 到后台换取 openId, sessionKey, unionId
+        wx.request({
+          url:`https://api.weixin.qq.com/sns/jscode2session?appid=wxd29b1aef999221b0&secret=922f71769e48bb9bc134761374cf0b29&js_code=${res.code}&grant_type=authorization_code`, 
+          method:'get',
+          success:function(data){
+            app.globalData.openId = data.data.openid
+          }
+        })
+      }
+    })
   },
   sendOrder () {
     wx.navigateTo({
@@ -46,4 +45,5 @@ Page({
   onGotUserInfo (e) {
     console.log(e)
   }
+
 })
