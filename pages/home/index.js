@@ -9,7 +9,7 @@ Page({
     imgUrls: ['http://www.zilii.top/assets/blogImg/1.png',
     'http://www.zilii.top/assets/blogImg/2.png',
     'http://www.zilii.top/assets/blogImg/4.png',
-  ]
+    ]
   },
   //事件处理函数
   bindViewTap: function() {
@@ -38,6 +38,10 @@ Page({
       url: '/pages/orderForm/index'
     })
   },
+  buyCombo: function () {
+    wx.navigateTo({
+      url: '/pages/package/index'
+    })
   onGotUserInfo (e) {
     console.log(e)
   }
