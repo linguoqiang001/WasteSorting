@@ -8,9 +8,9 @@
       </swiper-item>
     </block>
   </swiper>
-  <view class="combo">
-    <view class="buy" bindtap="buyCombo">购买套餐更优惠，点击去购买</view>
-  </view>
+  <i-notice-bar icon="systemprompt" loop speed='2200' bindtap="buyCombo">
+    购买套餐更优惠，点击去购买
+  </i-notice-bar>
   <view class="process">
     <view class="process-title">
       <view class="process-title-dot"></view>
@@ -49,7 +49,4 @@
       <view class="item-right" bindtap="qiangdan" data-item="{{item}}">抢单</view>
     </view>
   </view>
-  <i-modal title="提示" visible="{{true}}" bind:ok="handleClose1" bind:cancel="handleClose1">
-    <view>确认接受该订单</view>
-  </i-modal>
 </view>

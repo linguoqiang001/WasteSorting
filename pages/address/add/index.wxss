@@ -16,9 +16,9 @@ input{
   display: inline-block;
 }
 .btn{
-  margin-top: 40rpx;
+  border-radius: 100rpx;
   background-color: #32CD32;
   color: #fff;
-  margin: 0 60rpx;
+  margin: 0 40rpx;
   margin-top: 60rpx;
 }

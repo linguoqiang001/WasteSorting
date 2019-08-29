@@ -1,5 +1,6 @@
 {
     "usingComponents": {
-        "i-modal": "../../dist/modal/index"
+        "i-modal": "../../dist/modal/index",
+        "i-notice-bar": "../../dist/notice-bar/index"
     }
 }

@@ -70,21 +70,6 @@
 .title{
   color: #32CD32;
 }
-.combo{
-  height: 60rpx;
-  width: 100%;
-  line-height: 60rpx;
-  display: inline-block;
-  background-color: #fff;
-}
-.buy {
-  padding-left: 20px;
-  font-size: 12px;
-  color: red;
-  display: inline-block;
-  white-space: nowrap;
-  animation: 10s wordsLoop linear infinite normal;
-}
 .list {
   background: #ffffff;
   margin-top: 20rpx;
