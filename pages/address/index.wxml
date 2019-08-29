@@ -3,7 +3,7 @@
       <view>姓名：{{userInfo.user_name}} </view>
       <view>电话：{{userInfo.tel}}</view>
       <view>地址：{{userInfo.address}}</view> 
-      <view class="edit" data-name='{{userInfo.user_name}}' data-phone="{{userInfo.tel}}" data-address="{{userInfo.address}}" bindtap="editAddress">编辑</view>
+      <view class="edit" data-name='{{userInfo.user_name}}' data-phone="{{userInfo.tel}}" data-address="{{userInfo.address}}" bindtap="editAddress"><image  class="pic" src="../../images/edit.png" /></view>
   </view>
   <button class="add-btn" bindtap="addAddress"> 新增地址</button>
 </view>
