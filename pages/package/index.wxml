@@ -1,4 +1,7 @@
 <view class="wrap">
+  <view class="combo">
+    <image class="pic" src="../../images/combo.png" />
+  </view>
   <view class="list">
     <view class="item {{item.class}}" bindtap="selected" wx:for="{{items}}" data-index="{{index}}">
       <view class="item-title">{{item.title}}</view>
@@ -10,12 +13,12 @@
   </view>
   <view class="notice">
     <view class="notice-title">购买须知</view>
-    <view class="notice-content">阿斯顿发萨达发发阿斯顿发斯蒂芬阿斯蒂发斯蒂斯顿发阿斯顿发阿斯顿</view>
-    <view class="notice-content">阿斯顿发萨达发发阿斯顿发斯蒂芬阿斯蒂发斯蒂斯顿发阿斯顿发阿斯顿发阿斯顿</view>
-    <view class="notice-content">阿斯顿发萨达发发阿斯顿发斯蒂芬阿斯蒂发斯蒂芬阿斯顿发阿斯顿发阿斯顿发阿斯顿发阿斯顿发阿斯顿发阿斯顿发阿斯顿</view>
-    <view class="notice-content">阿斯顿发萨达发发阿斯顿发斯蒂芬阿斯蒂发斯蒂芬阿斯顿发阿斯顿发阿斯顿发斯顿发阿斯顿</view>
-    <view class="notice-content">阿斯顿发萨达发发阿斯顿发顿</view>
-    <view class="notice-content">阿斯顿发萨顿发阿斯顿</view>
+    <view class="notice-content"></view>
+    <view class="notice-content">套餐有效期根据具体套餐内容而定，账户内月卡购买总天数不得大于240天；</view>
+    <view class="notice-content">每次购买套餐可以获得相应的积分，一积分相当于人民币1元，每月依次累加；</view>
+    <view class="notice-content">每天免费代扔垃圾10次，距离限制为5公里，超出距离正常计费；</view>
+    <view class="notice-content">选择“余额支付”购买套餐，不支持使用优惠券；成功购买套餐后，产生的费用不予退还</view>
+    <view class="notice-content">最终解释权归“快扔吧”所有。</view>
   </view>
   <view class="purchase">
     <view class="total">

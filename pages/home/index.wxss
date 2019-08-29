@@ -75,7 +75,7 @@
   width: 100%;
   line-height: 60rpx;
   display: inline-block;
-  background-color: #f5f5f5;
+  background-color: #fff;
 }
 .buy {
   padding-left: 20px;

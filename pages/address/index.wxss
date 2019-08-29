@@ -3,7 +3,7 @@
   background-color: #32CD32;
   margin: 0 40rpx;
   position: fixed;
-  bottom: 0;
+  bottom: 40rpx;
   width: 670rpx;
 }
 .address{

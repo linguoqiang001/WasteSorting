@@ -11,6 +11,8 @@
     <text wx:else class="nickname">{{userInfo.nickName}}</text>
   </button>
   <view class="items">
-    <navigator class="item" url="/pages/address/index">地址管理</navigator>
+    <navigator class="item" url="/pages/address/index">地址管理
+    <image class="arrow" src="../../images/arrow.png" />
+    </navigator>
   </view>
 </view>

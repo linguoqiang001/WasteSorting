@@ -53,7 +53,15 @@
   padding: 10rpx 0;
   margin-left: 20rpx;
   border-bottom: 2rpx solid #EEEEEE;
+  height: 100rpx;
+  line-height: 100rpx;
 }
 .item:last-child {
   border-bottom: none;
+}
+.arrow{
+  width: 60rpx;
+  height: 60rpx;
+  float: right;
+  padding-top: 20rpx;
 }
