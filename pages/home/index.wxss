@@ -85,7 +85,41 @@
   white-space: nowrap;
   animation: 10s wordsLoop linear infinite normal;
 }
-
+.list {
+  background: #ffffff;
+  margin-top: 20rpx;
+}
+.item {
+  padding: 20rpx 0;
+  margin-left: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #F2F2F2;
+}
+.item-address {
+  font-size: 30rpx;
+}
+.item-date {
+  margin-top: 10rpx;
+  font-size: 26rpx;
+  color: #9B9B9B;
+}
+.item-price {
+  margin-top: 10rpx;
+  font-size: 26rpx;
+}
+.item-right {
+  background: #32CD32;
+  width: 120rpx;
+  height: 60rpx;
+  border-radius: 30rpx;
+  margin-right: 30rpx;
+  color: #ffffff;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 60rpx;
+}
 @keyframes wordsLoop {
   0% {
       transform: translateX(200px);

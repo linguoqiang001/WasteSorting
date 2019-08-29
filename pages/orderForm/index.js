@@ -1,6 +1,7 @@
-// pages/orderForm/index.js
-Page({
+let http = require('../../utils/network.js')
+const app = getApp()
 
+Page({
   /**
    * 页面的初始数据
    */
@@ -22,7 +23,8 @@ Page({
         selectId: 0,
         options: [1,2,3,4,5,6]
       },
-      isTip: false
+      isTip: false,
+      message: ''
     },
     
   },
@@ -32,31 +34,17 @@ Page({
    */
   onLoad: function (options) {
     let d = new Date()
-    let month = d.getMonth() > 9 ? d.getMonth() : '0' + d.getMonth()
-    let day = d.getDay() > 9 ? d.getDay() : '0' + d.getDay()
+    let month = d.getMonth() + 1 
+    month = month > 9 ? month : '0' + month
+    let day = d.getDate() > 9 ? d.getDate() : '0' + d.getDate()
     let hours = d.getHours() > 9 ? d.getHours() : '0' + d.getHours()
     let minutes = d.getMinutes() > 9 ? d.getMinutes() : '0' + d.getMinutes()
     let date =  d.getFullYear() + '-' + month + '-' + day
     let time = hours + ':' + minutes
-    console.log(date)
     this.setData({
       ["items.date"]: date,
       ["items.time"]: time
     })
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
   },
 
   elevatorChange (e) {
@@ -72,15 +60,19 @@ Page({
   },
 
   payChange (e) {
-    
+    this.setData({
+      ["items.payments.selectId"]: e.detail.value
+    })
   },
 
   wasteTypeChange () {
 
   },
 
-  elevatorChange () {
-
+  floorChange (e) {
+    this.setData({
+      ["items.floors.selectId"]: e.detail.value
+    })
   },
 
   dateChange (e) {
@@ -94,8 +86,37 @@ Page({
       ["items.time"]: e.detail.value
     })
   },
-
-  test (e) {
-    console.log(e.currentTarget.dataset)
+  compMessage (e) {
+    this.setData({
+      ["items.message"]: e.detail.value
+    })
+  },
+  submitOrder () {
+    let self = this
+    wx.getLocation({
+      success (res) {
+        self.request(res.longitude, res.latitude)
+      }
+    })
+  },
+  request (jindu, weidu) {
+    let items = this.data.items
+    http.GET({
+      url: 'createOrder',
+      params: {
+        openId: app.globalData.openId,
+        pay_type: items.payments.selectId,
+        floorNum: items.floors.selectId,
+        server_date: items.date,
+        server_time: items.time,
+        fee: items.isTip,
+        comment: items.message,
+        jindu,
+        weidu
+      },
+      success (res) {
+        console.log(res)
+      }
+    })
   }
 })

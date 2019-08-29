@@ -11,8 +11,21 @@
     <text wx:else class="nickname">{{userInfo.nickName}}</text>
   </button>
   <view class="items">
-    <navigator class="item" url="/pages/address/index">地址管理
-    <image class="arrow" src="../../images/arrow.png" />
+    <navigator class="item" url="/pages/address/index">
+      <view class="item-name">待派单</view>
+      <image class="item-img" src="https://pages.anjukestatic.com/usersite/touch/img/decoration/zx_comm_icon_rightarrow@3x.png" />
+    </navigator>
+    <navigator class="item">
+      <view class="item-name">完结派单</view>
+      <image class="item-img" src="https://pages.anjukestatic.com/usersite/touch/img/decoration/zx_comm_icon_rightarrow@3x.png" />
+    </navigator>
+    <navigator class="item" url="/pages/my-order/index">
+      <view class="item-name">我的接单</view>
+      <image class="item-img" src="https://pages.anjukestatic.com/usersite/touch/img/decoration/zx_comm_icon_rightarrow@3x.png" />
+    </navigator>
+    <navigator class="item">
+      <view class="item-name">地址管理</view>
+      <image class="item-img" src="https://pages.anjukestatic.com/usersite/touch/img/decoration/zx_comm_icon_rightarrow@3x.png" />
     </navigator>
   </view>
 </view>

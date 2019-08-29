@@ -1,0 +1,12 @@
+<view class="wrap">
+  <view class="list">
+    <view class="item" wx:for="{{list}}">
+      <view class="item-left">
+        <view class="item-address">{{item.addres}}</view>
+        <view class="item-date">{{item.floorNum + 1}}楼 / {{item.server_date}} {{item.server_time}}</view>
+        <view class="item-price">{{item.price}}元</view>
+      </view>
+      <view class="item-right"> {{item.server_status}}</view>
+    </view>
+  </view>
+</view>

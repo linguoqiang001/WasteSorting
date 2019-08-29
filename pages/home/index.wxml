@@ -39,4 +39,17 @@
     </view>
     <view class="process-paidan" bindtap="sendOrder">一键派单</view>
   </view>
+  <view class="list">
+    <view class="item" wx:for="{{list}}" wx:if="{{item.server_status == '待服务'}}">
+      <view class="item-left">
+        <view class="item-address">{{item.addres}}</view>
+        <view class="item-date">{{item.floorNum + 1}}楼 / {{item.server_date}} {{item.server_time}}</view>
+        <view class="item-price">{{item.price}}元</view>
+      </view>
+      <view class="item-right" bindtap="qiangdan" data-item="{{item}}">抢单</view>
+    </view>
+  </view>
+  <i-modal title="提示" visible="{{true}}" bind:ok="handleClose1" bind:cancel="handleClose1">
+    <view>确认接受该订单</view>
+  </i-modal>
 </view>

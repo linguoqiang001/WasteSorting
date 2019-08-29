@@ -1,0 +1,45 @@
+.dialog-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #000;
+    opacity: 0.2;
+}
+.dialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 200;
+    background: #ffffff;
+    width: 60%;
+    text-align: center;
+    border-radius: 10rpx;
+}
+.title {
+    font-weight: bold;
+    padding: 10rpx 20rpx;
+}
+.subtitle {
+    padding: 10rpx 20rpx 30rpx;
+    border-bottom: 1px solid #D0D0D0;
+    text-align: left;
+    font-size: 28rpx;
+}
+.options {
+    display: flex;
+}
+.cancle {
+    flex: 1;
+    text-align: center;
+    padding: 20rpx 0;
+}
+.confirm {
+    flex: 1;
+    text-align: center;
+    color: #40D041;
+    padding: 20rpx 0;
+    border-left: 1px solid #D0D0D0;
+}

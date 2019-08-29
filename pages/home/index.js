@@ -10,7 +10,8 @@ Page({
     imgUrls: ['http://www.zilii.top/assets/blogImg/1.png',
     'http://www.zilii.top/assets/blogImg/2.png',
     'http://www.zilii.top/assets/blogImg/4.png',
-    ]
+    ],
+    list: []
   },
   //事件处理函数
   bindViewTap: function() {
@@ -19,15 +20,33 @@ Page({
     })
   },
   onLoad: function () {
-    wx.login({
-      success: res => {
-        //发送 res.code 到后台换取 openId, sessionKey, unionId
-        wx.request({
-          url:`https://api.weixin.qq.com/sns/jscode2session?appid=wxd29b1aef999221b0&secret=922f71769e48bb9bc134761374cf0b29&js_code=${res.code}&grant_type=authorization_code`, 
-          method:'get',
-          success:function(data){
-            app.globalData.openId = data.data.openid
+    let self = this
+    wx.getLocation({
+      success (res) {
+        self.getList(res.longitude, res.latitude)
+      }
+    })
+  },
+  getList (jindu, weidu) {
+    let self = this
+    http.GET({
+      url: 'getReciveOrderList',
+      params: {
+        jindu,
+        weidu,
+        distance: 1000
+      },
+      success (res) {
+        let data = res.data
+        data.forEach(item => {
+          if (item.distance > 1000) {
+            item.distance = (item.distance / 1000).Math.toFixed(1) + 'km'
+          } else {
+            item.distance = item.distance.toFixed(0) + 'm'
           }
+        })
+        self.setData({
+          list: data
         })
       }
     })
@@ -44,6 +63,25 @@ Page({
   },
   onGotUserInfo (e) {
     console.log(e)
+  },
+  qiangdan (e) {
+    let item = e.currentTarget.dataset.item
+    wx.showModal({
+      title: '提示',
+      content: '确认接受该订单？',
+      success (res) {
+        if (res.confirm) {
+          http.GET({
+            url: 'grabOrder',
+            params: {
+              orderId: item.id,
+              openId: app.globalData.openId
+            }
+          })
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })
   }
-
 })

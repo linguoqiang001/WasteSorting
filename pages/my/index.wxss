@@ -50,11 +50,14 @@
   background: #ffffff;
 }
 .item {
-  padding: 10rpx 0;
-  margin-left: 20rpx;
+  padding: 20rpx 0;
+  margin-left: 40rpx;
   border-bottom: 2rpx solid #EEEEEE;
   height: 100rpx;
   line-height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .item:last-child {
   border-bottom: none;
@@ -64,4 +67,12 @@
   height: 60rpx;
   float: right;
   padding-top: 20rpx;
+}
+.item-name {
+
+}
+.item-img {
+  width: 20rpx;
+  height: 20rpx;
+  margin-right: 20rpx;
 }

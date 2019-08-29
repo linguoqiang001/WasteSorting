@@ -1,0 +1,12 @@
+<view wx:if="{{show}}">
+    <view class="dialog-wrap">
+    </view>
+    <view class="dialog">
+        <view class="title">{{msg.title}}</view>
+        <view class="subtitle">"{{msg.subtitle}}"</view>
+        <view class="options">
+            <view class="cancle" bindtap="cancle">取消</view>
+            <view class="confirm" bindtap="confirm">确定</view>
+        </view>
+    </view>
+</view>
