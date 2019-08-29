@@ -26,6 +26,9 @@ Page({
   onLoad: function () {
     let self = this
     wx.getLocation({
+      fail () {
+        self.getList(0, 0)
+      },
       success (res) {
         self.setData({
           jindu: res.longitude,
@@ -46,6 +49,12 @@ Page({
       },
       success (res) {
         let data = res.data
+        let arr = []
+        data.forEach(item => {
+          if (item.server_status == '待服务') {
+            arr.push(item)
+          }
+        })
         // data.forEach(item => {
         //   if (item.distance > 1000) {
         //     item.distance = (item.distance / 1000).Math.toFixed(1) + 'km'
@@ -54,7 +63,7 @@ Page({
         //   }
         // })
         self.setData({
-          list: data
+          list: arr
         })
       }
     })
@@ -80,6 +89,7 @@ Page({
     })
   },
   confirm () {
+    let self = this
     let item = this.data.item
     http.GET({
       url: 'grabOrder',
@@ -88,7 +98,7 @@ Page({
         openId: app.globalData.openId
       },
       success (res) {
-        console.log(res)
+        self.delete(item.id)
       }
     })
     this.handleClose()
@@ -100,5 +110,16 @@ Page({
   },
   shuaxin () {
     this.getList(this.data.jindu, this.data.weidu)
+  },
+  delete (id) {
+    let arr = []
+    this.data.list.forEach(item => {
+      if (item.id != id) {
+        arr.push(item)
+      }
+    })
+    this.setData({
+      list: arr
+    })
   }
 })

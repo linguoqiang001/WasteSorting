@@ -1,12 +1,18 @@
 <view class="wrap">
+  <i-tabs current="{{ current }}" bindchange="handleChange">
+      <i-tab key="tab1" title="我的派单">
+      </i-tab>
+      <i-tab key="tab2" title="我的接单">
+      </i-tab>
+  </i-tabs>
   <view class="list">
-    <view class="item" wx:for="{{list}}" wx:if="{{item.server_status == '待服务'}}">
+    <view class="item" wx:for="{{list}}" bind:tap="gotoDetail" data-item="{{item}}">
       <view class="item-left">
         <view class="item-address">{{item.addres}}</view>
         <view class="item-date">{{item.floorNum + 1}}楼 / {{item.server_date}} {{item.server_time}}</view>
-        <view class="item-price">{{item.price}}元</view>
+        <view class="item-price">{{item.real_pay}}元</view>
       </view>
-      <view class="item-right" bindtap="qiangdan" data-item="{{item}}">抢单</view>
+      <!-- <view class="item-right"> {{item.server_status}}</view> -->
     </view>
-  </view>
+  </view> 
 </view>

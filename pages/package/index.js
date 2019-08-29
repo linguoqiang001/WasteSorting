@@ -1,5 +1,6 @@
 const app = getApp()
 let http = require('../../utils/network.js')
+const { $Toast } = require('../../dist/base/index');
 
 Page({
   data: {
@@ -46,7 +47,10 @@ Page({
         money: self.data.jifen
       },
       success() {
-        
+        $Toast({
+          content: '购买成功',
+          type: 'success'
+        });
       }
     })
     this.setData({

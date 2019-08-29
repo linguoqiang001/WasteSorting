@@ -7,7 +7,7 @@
       <view class="item-title">{{item.title}}</view>
       <view class="item-price">
         <text class="new-price">{{item.newPrice}}元</text>
-        <text class="old-price">{{item.oldPrice}}元</text>
+        <text class="old-price" style="text-decoration:line-through;color:#A7A7A7;">{{item.oldPrice}}元</text>
       </view>
     </view>
   </view>
@@ -30,4 +30,5 @@
   <i-modal title="提示" visible="{{showModal}}" bind:ok="modalConfirm" bind:cancel="handleClose">
     <view>确认购买?</view>
   </i-modal>
+  <i-toast id="toast" />
 </view>

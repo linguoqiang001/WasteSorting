@@ -10,7 +10,7 @@
       <view class="confirm" wx:if="{{item.server_status == '已抢'}}" bind:tap="confirm" data-item="{{item}}">确认完成</view>
     </view>
   </view>
-  <i-modal title="提示" visible="{{showModal}}" bind:ok="modalConfirm" bind:cancel="handleClose1">
+  <i-modal title="提示" visible="{{showModal}}" bind:ok="modalConfirm" bind:cancel="handleClose">
       <view>确认该订单已被完成</view>
   </i-modal>
 </view>

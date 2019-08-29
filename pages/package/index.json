@@ -1,5 +1,7 @@
 {
+    "navigationBarTitleText": "套餐",
     "usingComponents": {
-        "i-modal": "../../dist/modal/index"
+        "i-modal": "../../dist/modal/index",
+        "i-toast": "../../dist/toast/index"
     }
 }

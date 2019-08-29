@@ -42,6 +42,12 @@
   <view class="adv-wrapper" bindtap="buyCombo"><image class="adv" src="../../images/adv.png" /></view>
   <view class="list">
     <view class="item" wx:for="{{list}}" wx:if="{{item.server_status == '待服务'}}">
+    <view class="process-title list-title">
+      <view class="process-title-dot"></view>
+      <view >附近可接订单</view>
+      <view class="shuaxin" bind:tap="shuaxin">刷新</view>
+    </view>
+    <view class="item" wx:for="{{list}}" wx:if="{{list.length}}" >
       <view class="item-left">
         <view class="item-address">{{item.addres}}</view>
         <view class="item-date">{{item.floorNum + 1}}楼 / {{item.server_date}} {{item.server_time}}</view>

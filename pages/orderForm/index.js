@@ -1,4 +1,5 @@
 let http = require('../../utils/network.js')
+const { $Toast } = require('../../dist/base/index');
 const app = getApp()
 
 Page({
@@ -26,7 +27,8 @@ Page({
       isTip: false,
       message: ''
     },
-    realPay: 1
+    realPay: 1,
+    showModal: false
   },
 
   /**
@@ -100,11 +102,26 @@ Page({
     })
   },
   submitOrder () {
+    this.setData({
+      showModal: true
+    })
+  },
+  confirm () {
+    console.log('点击确认')
     let self = this
     wx.getLocation({
+      fail () {
+        self.request(0, 0)
+      },
       success (res) {
         self.request(res.longitude, res.latitude)
       }
+    })
+    this.handleClose()
+  },
+  handleClose () {
+    this.setData({
+      showModal: false
     })
   },
   request (jindu, weidu) {
@@ -133,7 +150,10 @@ Page({
         weidu
       },
       success (res) {
-        console.log(res)
+        $Toast({
+          content: '提交成功',  
+          type: 'success'
+        });
       }
     })
   }

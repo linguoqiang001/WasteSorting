@@ -4,7 +4,7 @@
 }
 .item {
   display: flex;
-  padding: 16rpx 0;
+  padding: 26rpx 0;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #E6E6E4;

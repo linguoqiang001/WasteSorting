@@ -48,11 +48,15 @@
       <text class="real-pay" style="color:red">{{realPay}}积分</text>
       <!-- <switch checked="{{isTip}}" style='zoom:.8;' bindchange="tipChange"/> -->
     </view>
-    <view class="item">
+    <!-- <view class="item">
       <textarea placeholder="留言" bindblur="compMessage"/>
-    </view>
+    </view> -->
   </view>
-  <button class="btn" type="primary" bindtap="submitOrder">
-    发布需求
-  </button>
+    <i-modal title="提示" visible="{{showModal}}" bind:ok="confirm" bind:cancel="handleClose">
+    <view>确认提交？</view>
+    </i-modal>
+    <i-toast id="toast" />
+    <button class="btn" type="primary" bindtap="submitOrder">
+      发布需求
+    </button>
 </view>

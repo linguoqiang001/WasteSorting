@@ -1,4 +1,4 @@
-var baseUrl = 'http://10.249.23.120:8080/'
+var baseUrl = 'http://10.249.16.59:8080/'
 
 var requestHandler = {
   url:'',

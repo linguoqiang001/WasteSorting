@@ -6,7 +6,9 @@ Page({
     userInfo: {
       avatarUrl: 'http://www.zilii.top/assets/blogImg/default_avatar.jpg'
     },
-    user: {}
+    user: {
+      money: 0
+    }
   },
   onLoad () {
     if (app.globalData.userInfo) {
@@ -14,6 +16,8 @@ Page({
         userInfo: app.globalData.userInfo
       })
     }
+  },
+  onShow () {
     this.getUser()
   },
   getUserInfo (e) {
@@ -31,7 +35,7 @@ Page({
       },
       success(res) {
         self.setData({
-          user: res.data
+          money: res.data.money
         })
       }
     })

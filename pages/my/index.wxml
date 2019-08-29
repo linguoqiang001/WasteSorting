@@ -12,7 +12,7 @@
       <text wx:else class="nickname">{{userInfo.nickName}}</text>
     </button>
     <view class="jifen">
-      剩余积分:{{user.money}}
+      剩余积分:{{money}}
     </view>
   </view>
   <view class="items">

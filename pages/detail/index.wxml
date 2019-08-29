@@ -1,0 +1,26 @@
+<view class="wrap">
+    <view class="item">
+        <view class="left">地址</view>
+        <view class="right">{{item.addres}}</view>
+    </view>
+    <view class="item">
+        <view class="left">联系人</view>
+        <view class="right">{{userInfo.user_name}}</view>
+    </view>
+    <view class="item">
+        <view class="left">电话</view>
+        <view class="right">{{userInfo.tel}}</view>
+    </view>
+    <view class="item">
+        <view class="left">上门日期</view>
+        <view class="right">{{item.server_date}} {{item.server_time}}</view>
+    </view>
+     <view class="item">
+        <view class="left">电梯</view>
+        <view class="right">{{item.dianti ? '有电梯' : '无电梯'}}</view>
+    </view>
+    <view class="item">
+        <view class="left">楼层</view>
+        <view class="right">{{item.floorNum + 1}}楼</view>
+    </view>
+</view>

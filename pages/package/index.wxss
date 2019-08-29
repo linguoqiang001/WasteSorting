@@ -31,7 +31,7 @@
   box-sizing: border-box;
 }
 .notice {
-  padding: 0 30rpx;
+  padding: 0 30rpx 140rpx;
   margin-top: 20rpx;
 }
 .notice-title {
