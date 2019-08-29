@@ -1,0 +1,38 @@
+.list {
+    margin-left: 40rpx;
+}
+.item {
+    padding: 20rpx 0;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #F2F2F2;
+}
+.item-address {
+    font-size: 30rpx;
+}
+.item-date {
+    margin-top: 10rpx;
+    font-size: 26rpx;
+    color: #9B9B9B;
+}
+.item-price {
+    margin-top: 10rpx;
+    font-size: 26rpx;
+}
+.item-right {
+    position: absolute;
+    right: 20rpx;
+    top:20rpx;
+    color: #32CD32;
+    font-size: 26rpx;
+}
+.confirm {
+    position: absolute;
+    padding: 10rpx 14rpx;
+    right: 20rpx;
+    bottom: 20rpx;
+    font-size: 26rpx;
+    border: 2rpx solid #E4E4E4;
+}

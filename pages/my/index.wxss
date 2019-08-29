@@ -8,6 +8,7 @@
 } 
 .avatar {
   display: flex;
+  flex: 1;
   align-items: center;
   background: #32CD32;
   padding: 30rpx 30px;
@@ -50,11 +51,9 @@
   background: #ffffff;
 }
 .item {
-  padding: 20rpx 0;
+  padding: 36rpx 0;
   margin-left: 40rpx;
   border-bottom: 2rpx solid #EEEEEE;
-  height: 100rpx;
-  line-height: 100rpx;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -68,11 +67,19 @@
   float: right;
   padding-top: 20rpx;
 }
-.item-name {
-
-}
 .item-img {
   width: 20rpx;
   height: 20rpx;
   margin-right: 20rpx;
+}
+.wrap-top {
+  display: flex;
+  justify-content: space-between;
+  background: #32CD32;
+  align-items: center;
+}
+.jifen {
+  margin-right: 40rpx;
+  color: #ffffff;
+  font-size: 36rpx;
 }

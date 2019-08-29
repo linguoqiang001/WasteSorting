@@ -1,24 +1,29 @@
 <!--index.wxml-->
 <view class="wrap">
-  <button class="avatar" hover-class="none" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
-    <view class="avatar-wrap">
-      <image class="avatar-img" src="{{userInfo.avatarUrl}}" />
+  <view class="wrap-top">
+      <button class="avatar" hover-class="none" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+      <view class="avatar-wrap">
+        <image class="avatar-img" src="{{userInfo.avatarUrl}}" />
+      </view>
+      <view class="avatar-info" wx:if="{{!userInfo.nickName}}">
+        <text class="info-click">点击授权</text>
+        <text class="info-tip">授权后体验更佳</text>
+      </view>
+      <text wx:else class="nickname">{{userInfo.nickName}}</text>
+    </button>
+    <view class="jifen">
+      剩余积分:{{user.money}}
     </view>
-    <view class="avatar-info" wx:if="{{!userInfo.nickName}}">
-      <text class="info-click">点击授权</text>
-      <text class="info-tip">授权后体验更佳</text>
-    </view>
-    <text wx:else class="nickname">{{userInfo.nickName}}</text>
-  </button>
+  </view>
   <view class="items">
-    <navigator class="item" url="/pages/address/index">
-      <view class="item-name">待派单</view>
+    <navigator class="item" url="/pages/my-publish/index">
+      <view class="item-name">我的派单</view>
       <image class="item-img" src="https://pages.anjukestatic.com/usersite/touch/img/decoration/zx_comm_icon_rightarrow@3x.png" />
     </navigator>
-    <navigator class="item">
+    <!-- <navigator class="item">
       <view class="item-name">完结派单</view>
       <image class="item-img" src="https://pages.anjukestatic.com/usersite/touch/img/decoration/zx_comm_icon_rightarrow@3x.png" />
-    </navigator>
+    </navigator> -->
     <navigator class="item" url="/pages/my-order/index">
       <view class="item-name">我的接单</view>
       <image class="item-img" src="https://pages.anjukestatic.com/usersite/touch/img/decoration/zx_comm_icon_rightarrow@3x.png" />

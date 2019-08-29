@@ -1,7 +1,6 @@
 const app = getApp()
 let http = require('../../utils/network.js')
 
-
 Page({
   data: {
     list: []

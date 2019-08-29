@@ -20,6 +20,9 @@ Page({
     })
   },
   onLoad () {
+
+  },
+  onShow () {
     let self = this
     http.GET({
       url: 'getUser',

@@ -26,7 +26,7 @@ Page({
       isTip: false,
       message: ''
     },
-    
+    realPay: 1
   },
 
   /**
@@ -48,8 +48,12 @@ Page({
   },
 
   elevatorChange (e) {
+    let items = this.data.items
     this.setData({
       ["items.isElevator"]: e.detail.value
+    })
+    this.setData({
+      realPay: items.isElevator ? 1 : 1 + 0.3 * items.floors.selectId
     })
   },
 
@@ -70,8 +74,12 @@ Page({
   },
 
   floorChange (e) {
+    let items = this.data.items
     this.setData({
       ["items.floors.selectId"]: e.detail.value
+    })
+    this.setData({
+      realPay: items.isElevator ? 1 : 1 + 0.3 * items.floors.selectId
     })
   },
 
@@ -101,16 +109,26 @@ Page({
   },
   request (jindu, weidu) {
     let items = this.data.items
+    let pay_type = items.payments.selectId
+    let floorNum = items.floors.selectId
+    let server_date = items.date
+    let server_time = items.time
+    let fee = items.isTip
+    let comment = items.message
+    let real_pay = this.data.realPay
+    let dianti = items.isElevator
     http.GET({
       url: 'createOrder',
       params: {
         openId: app.globalData.openId,
-        pay_type: items.payments.selectId,
-        floorNum: items.floors.selectId,
-        server_date: items.date,
-        server_time: items.time,
-        fee: items.isTip,
-        comment: items.message,
+        pay_type,
+        floorNum,
+        server_date,
+        server_time,
+        fee,
+        comment,
+        real_pay,
+        dianti,
         jindu,
         weidu
       },

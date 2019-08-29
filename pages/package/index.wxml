@@ -25,6 +25,9 @@
       <text class="">总计  ￥</text>
       <text style="font-weight:bold">{{money}}</text>
     </view>
-    <view class="purchase-btn">立即购买</view>
+    <view class="purchase-btn" bind:tap="buy">立即购买</view>
   </view>
+  <i-modal title="提示" visible="{{showModal}}" bind:ok="modalConfirm" bind:cancel="handleClose">
+    <view>确认购买?</view>
+  </i-modal>
 </view>

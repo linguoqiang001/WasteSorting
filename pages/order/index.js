@@ -1,12 +1,14 @@
 const app = getApp()
 let http = require('../../utils/network.js')
 
-
 Page({
   data: {
     list: []
   },
   onLoad () {
+
+  },
+  onShow () {
     let self = this
     http.GET({
       url: 'grabedOrder',

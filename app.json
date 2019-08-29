@@ -7,7 +7,8 @@
     "pages/address/add/index",
     "pages/orderForm/index",
     "pages/package/index",
-    "pages/my-order/index"
+    "pages/my-order/index",
+    "pages/my-publish/index"
   ],
   "window": {
     "navigationBarTitleText": "垃圾分类",

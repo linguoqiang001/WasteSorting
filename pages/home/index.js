@@ -11,7 +11,11 @@ Page({
     'http://www.zilii.top/assets/blogImg/2.png',
     'http://www.zilii.top/assets/blogImg/4.png',
     ],
-    list: []
+    list: [],
+    showModal: false,
+    jindu: 0,
+    weidu: 0,
+    item: {}
   },
   //事件处理函数
   bindViewTap: function() {
@@ -23,6 +27,10 @@ Page({
     let self = this
     wx.getLocation({
       success (res) {
+        self.setData({
+          jindu: res.longitude,
+          weidu: res.latitude
+        })
         self.getList(res.longitude, res.latitude)
       }
     })
@@ -34,17 +42,17 @@ Page({
       params: {
         jindu,
         weidu,
-        distance: 1000
+        // distance: 1000
       },
       success (res) {
         let data = res.data
-        data.forEach(item => {
-          if (item.distance > 1000) {
-            item.distance = (item.distance / 1000).Math.toFixed(1) + 'km'
-          } else {
-            item.distance = item.distance.toFixed(0) + 'm'
-          }
-        })
+        // data.forEach(item => {
+        //   if (item.distance > 1000) {
+        //     item.distance = (item.distance / 1000).Math.toFixed(1) + 'km'
+        //   } else {
+        //     item.distance = item.distance.toFixed(0) + 'm'
+        //   }
+        // })
         self.setData({
           list: data
         })
@@ -66,22 +74,31 @@ Page({
   },
   qiangdan (e) {
     let item = e.currentTarget.dataset.item
-    wx.showModal({
-      title: '提示',
-      content: '确认接受该订单？',
+    this.setData({
+      showModal: true,
+      item
+    })
+  },
+  confirm () {
+    let item = this.data.item
+    http.GET({
+      url: 'grabOrder',
+      params: {
+        orderId: item.id,
+        openId: app.globalData.openId
+      },
       success (res) {
-        if (res.confirm) {
-          http.GET({
-            url: 'grabOrder',
-            params: {
-              orderId: item.id,
-              openId: app.globalData.openId
-            }
-          })
-        } else if (res.cancel) {
-          console.log('用户点击取消')
-        }
+        console.log(res)
       }
     })
+    this.handleClose()
+  },
+  handleClose () {
+    this.setData({
+      showModal: false
+    })
+  },
+  shuaxin () {
+    this.getList(this.data.jindu, this.data.weidu)
   }
 })

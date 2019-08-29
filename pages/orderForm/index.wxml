@@ -44,8 +44,9 @@
       </picker>
     </view>
     <view class="item">
-      <text class="item-name">是否有小费</text>
-      <switch checked="{{isTip}}" style='zoom:.8;' bindchange="tipChange"/>
+      <text class="item-name">订单金额</text>
+      <text class="real-pay" style="color:red">{{realPay}}积分</text>
+      <!-- <switch checked="{{isTip}}" style='zoom:.8;' bindchange="tipChange"/> -->
     </view>
     <view class="item">
       <textarea placeholder="留言" bindblur="compMessage"/>

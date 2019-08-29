@@ -73,6 +73,11 @@
 .list {
   background: #ffffff;
   margin-top: 20rpx;
+  padding: 20rpx 40rpx;
+}
+.list-title {
+  border-bottom: 1px solid #F2F2F2;
+  padding: 20rpx 0;
 }
 .item {
   padding: 20rpx 0;
@@ -81,6 +86,9 @@
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #F2F2F2;
+}
+.item:last-child {
+  border: none;
 }
 .item-address {
   font-size: 30rpx;
@@ -104,6 +112,17 @@
   font-size: 28rpx;
   text-align: center;
   line-height: 60rpx;
+}
+.no-list {
+  text-align: center;
+  color: #A3A3A4;
+  padding: 20rpx 0;
+}
+.shuaxin {
+  position: absolute;
+  right: 20rpx;
+  font-size: 28rpx;
+  color: #A3A3A4;
 }
 @keyframes wordsLoop {
   0% {

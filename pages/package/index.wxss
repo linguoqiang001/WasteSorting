@@ -68,9 +68,9 @@
   background: #32CD32;
 }
 .combo{
-    width: 300rpx;
-    height: 180rpx;
-    margin: 10rpx auto;
+    width: 680rpx;
+    height: 400rpx;
+    margin: 20rpx auto;
 }
 .pic{
     width: 100%;
