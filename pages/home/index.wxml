@@ -1,16 +1,16 @@
 <!--index.wxml-->
 <view class="wrap">
-  <swiper class="ac-img" indicator-dots="{{indicatorDots}}"
-    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+<i-notice-bar icon="systemprompt" loop speed='2200' bindtap="buyCombo">
+    购买“畅扔”套餐更优惠，获取积分换好礼，点击去购买
+  </i-notice-bar>
+  <swiper class="ac-img" indicator-dots="true"
+    autoplay="true" circular="true" interval="2000" duration="1000">
     <block wx:for="{{imgUrls}}">
       <swiper-item>
         <image src="{{item}}" class="slide-image" mode="scaleToFill"/>
       </swiper-item>
     </block>
   </swiper>
-  <i-notice-bar icon="systemprompt" loop speed='2200' bindtap="buyCombo">
-    购买套餐更优惠，点击去购买
-  </i-notice-bar>
   <view class="process">
     <view class="process-title">
       <view class="process-title-dot"></view>
@@ -39,25 +39,15 @@
     </view>
     <view class="process-paidan" bindtap="sendOrder">一键派单</view>
   </view>
+  <view class="adv-wrapper" bindtap="buyCombo"><image class="adv" src="../../images/adv.png" /></view>
   <view class="list">
-    <view class="process-title list-title">
-      <view class="process-title-dot"></view>
-      <view >附近可接订单</view>
-      <view class="shuaxin" bind:tap="shuaxin">刷新</view>
-    </view>
-    <view class="item" wx:for="{{list}}" wx:if="{{item.server_status == '待服务' && list.length}}" >
+    <view class="item" wx:for="{{list}}" wx:if="{{item.server_status == '待服务'}}">
       <view class="item-left">
         <view class="item-address">{{item.addres}}</view>
         <view class="item-date">{{item.floorNum + 1}}楼 / {{item.server_date}} {{item.server_time}}</view>
-        <view class="item-price">{{item.real_pay}}元</view>
+        <view class="item-price">{{item.price}}元</view>
       </view>
       <view class="item-right" bindtap="qiangdan" data-item="{{item}}">抢单</view>
     </view>
-    <view class="no-list" wx:if="{{!list.length}}">
-      附近暂无订单
-    </view>
   </view>
-  <i-modal title="提示" visible="{{showModal}}" bind:ok="confirm" bind:cancel="handleClose">
-    <view>确认接受该订单</view>
-  </i-modal>
 </view>
